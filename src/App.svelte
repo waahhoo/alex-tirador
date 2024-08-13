@@ -15,7 +15,9 @@ import waahhoo from '../images/waahhoo.png'
 
 <div class="navBar fixed border border-transparent h-24 w-full bg-white z-10">
 	<div class="flex flex-col h-full items-center justify-center space-y-2">
-		<h1 class="text-2xl font-bold">ALEX TIRADOR</h1>
+		<Button class="text-black text-3xl font-bold bg-white hover:bg-white" href="#home">
+			ALEX TIRADOR
+		</Button>
 		<div class="flex flex-row h-full justify-between space-x-12 align-text-middle">
 			<Button class="text-neutral-500 bg-white font-semibold hover:bg-white hover:text-green-500" href="#home">
 				<span class="underline-animation">Home</span>
@@ -50,11 +52,60 @@ import waahhoo from '../images/waahhoo.png'
 		</div>
 	</section>
 </div>
-<div class="aboutMe flex flex-col items-center justify-center pt-48">
+<div class="aboutMe flex flex-col items-center justify-center pb-28">
 	<section id="about">
-		<div class="flex flex-col items-center justify-center space-y-4">
-			<p class="text-green-500 font-bold">Who am I?</p>
-			<h1 class="text-6xl">Waahhoo</h1>
+		<div class="flex flex-row items-center justify-center space-x-10 pt-28">
+			<div class="w-[20%] space-y-4">
+				<p class="text-green-500 font-bold">Who am I?</p>
+				<h1 class="text-3xl font-bold">Discover my interests and hobbies</h1>
+				<p class="text-lg text-neutral-600">
+					Welcome to my personal portfolio, my name is Alex. On this website I showcase my technical skills, personal projects, and diverse interests. 
+					Based in Hyattsville, Maryland, I am passionate about Software Development and Cybersecurity. 
+					I also love photography and going hiking with my friends during my breaks from school!
+				</p>
+				<div>
+					<a href="#contact" class="text-neutral-400 underline hover:no-underline text-lg">Contact Me</a>
+				</div>
+			</div>
+			<div class="flex items-center justify-center w-[20%]">
+				<img src="{coffee}" alt="coffee">
+			</div>
+		</div>
+	</section>
+</div>
+<div class="mySkills flex flex-col items-center justify-center bg-neutral-100 pb-28 w-full">
+	<section id="skills" class="w-full">
+		<div class="space-y-4">
+			<div class="flex items-center justify-center w-full">
+				<div class="w-[20%] space-y-4 text-left">
+					<p class="text-green-500 font-bold pt-28">My Skills</p>
+					<h1 class="text-3xl font-bold">Explore my expertise and projects</h1>
+				</div>
+			</div>
+			<div class="flex flex-row items-center justify-center space-x-10 w-full">
+				<Card.Root>
+					<Card.Content>
+						<h1>Project 1</h1>
+					</Card.Content>
+				</Card.Root>
+				<Card.Root>
+					<Card.Content>
+						<h1>Project 2</h1>
+					</Card.Content>
+				</Card.Root>
+				<Card.Root>
+					<Card.Content>
+						<h1>Project 3</h1>
+					</Card.Content>
+				</Card.Root>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="contactMe flex flex-col items-center justify-center w-full pb-28">
+	<section id="contact">
+		<div class="flex flex-row items-center justify-center space-x-10 pt-28">
+			<h1 class="text-5xl">Waahhoo</h1>
 			<HoverCard.Root>
 				<HoverCard.Trigger href="https://github.com/waahhoo">
 					<Avatar.Root class="h-48 w-48">
@@ -76,26 +127,6 @@ import waahhoo from '../images/waahhoo.png'
 					</div>
 				</HoverCard.Content>
 			</HoverCard.Root>
-			<Card.Root class="w-[350px]">
-				<Card.Header class="text-green-500 text-2xl font-bold">
-					Alex Tirador
-				</Card.Header>
-				<Card.Description>Discover my interests and hobbies *MOST PR PHRASE EVER*</Card.Description>
-				<Card.Content>
-					<p>idk what to put on here for now so here you go !!!!</p>
-				</Card.Content>
-			</Card.Root>
-		</div>
-	</section>
-</div>
-<div class="mySkills flex flex-col items-center justify-center pt-48">
-	<section id="skills">
-		<div class="flex flex-col items-center justify-center space-y-4">
-			<h1 class="text-4xl text-blue-400 font-semibold">This is my Skills tab</h1>
-			<p class="text-4xl text-blue-400 font-semibold">as you can see it is empty because I do not have skills</p>
-			<p class="text-4xl text-blue-400 font-semibold">;-;</p>
-			<p class="text-4xl text-blue-400 font-semibold">What do you think about this cursed color pallete ??</p>
-			<img src="{camera}" alt="camera">
 		</div>
 	</section>
 </div>
