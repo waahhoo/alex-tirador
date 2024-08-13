@@ -1,6 +1,8 @@
-# Svelte + Vite + TailwindCSS
+# Personal Website Portfolio Project
 
-This is my personal website and it was created using Svelte, Vite, and Tailwind
+This is my personal website and it was created using Svelte, Vite, and Tailwind. I decided to try to make a website portfolio after working at an internship where I got my first hands-on experience doing frontend web dev.
+I figured I'd first tackle a static website that won't be changing any time soon and then try another project that requires a little more full-stack development skill and interaction.
+But yeah this is it, hopefully you think it's cool, send it along to your friends if you think it's cool (or ugly and you want to roast me ;-;) ! !
 
 ## Technical considerations
 
