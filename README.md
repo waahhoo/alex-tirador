@@ -1,6 +1,6 @@
 # Svelte + Vite + TailwindCSS
 
-This is my personal website and it was created using Svelte and Vite
+This is my personal website and it was created using Svelte, Vite, and Tailwind
 
 ## Technical considerations
 
