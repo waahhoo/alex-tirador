@@ -16,9 +16,9 @@ import waahhoo from '../images/waahhoo.png'
 	<div class="flex flex-col h-full items-center justify-center space-y-2">
 		<h1 class="text-2xl font-bold">ALEX TIRADOR</h1>
 		<div class="flex flex-row h-full justify-between space-x-12 align-text-middle">
-			<p>Home</p>
-			<p>About</p>
-			<p>Skills</p>
+			<Button variant="outline">Home</Button>
+			<Button variant="outline">About</Button>
+			<Button variant="outline">Skills</Button>
 			<Button variant="outline">Contact</Button>
 		</div>
 	</div>
