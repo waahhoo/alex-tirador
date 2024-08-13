@@ -32,9 +32,9 @@ import waahhoo from '../images/waahhoo.png'
 </div>
 <div class="homeScreen flex flex-col overflow-hidden">
 	<section id="home">
-		<div data-bg="url('https://cdn.b12.io/media/fbeb727a-6267-11e7-9ce2-0242ac110002-nastuh-abootalebi-284882.jpg')" style=" background-image:url('https://cdn.b12.io/media/fbeb727a-6267-11e7-9ce2-0242ac110002-nastuh-abootalebi-284882.jpg')">
+		<div class="bg-fixed bg-cover bg-no-repeat" data-bg="url('https://cdn.b12.io/media/fbeb727a-6267-11e7-9ce2-0242ac110002-nastuh-abootalebi-284882.jpg')" style=" background-image:url('https://cdn.b12.io/media/fbeb727a-6267-11e7-9ce2-0242ac110002-nastuh-abootalebi-284882.jpg')">
 			<div class="w-screen overflow-hidden">
-				<div class="container h-screen w-[40%] text-left pt-[20%]">
+				<div class="container sm:max-sm:w-screen h-screen w-[40%] text-left pt-[20%]">
 					<div class="flex flex-col h-full space-y-8">
 						<p class="text-white text-6xl font-bold">Alex Tirador</p>
 						<div class="space-y-2">
