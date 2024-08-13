@@ -1,47 +1,24 @@
-# Svelte + Vite
+# Personal Website Portfolio Project
 
-This template should help get you started developing with Svelte in Vite.
-
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
-
-## Need an official Svelte framework?
-
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+This is my personal website and it was created using Svelte, Vite, and Tailwind. I decided to try to make a website portfolio after working at an internship where I got my first hands-on experience doing frontend web dev.
+I figured I'd first tackle a static website that won't be changing any time soon and then try another project that requires a little more full-stack development skill and interaction.
+But yeah this is it, hopefully you think it's cool, send it along to your friends if you think it's cool (or ugly and you want to roast me ;-;) ! !
 
 ## Technical considerations
 
 **Why use this over SvelteKit?**
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+- Svelte brings its own routing solution which might not be preferable for some users.
+- Allegedly deploying to Github Pages is really annoying / not possible (?) with SvelteKit
+- It's cool
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+**Why use this over plain JS, CSS, and HTML?**
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+- I had just finished working on a project using SvelteKit for an internship and so I was very familiar with Svelte.
+- Svelte has a lot of really nice syntax that helps make javascript look so much cleaner and readable.
+- Standard HTML and CSS look so ugly so Tailwind is a must (I am not going to spend 20 hours writing out CSS style tags).
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+## Other Notes
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+- This is my first time trying to make an actual personal website so it's a bit scuffed
+- I'm currently really enjoying frontend web development and design so this was a good exercise
