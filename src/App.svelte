@@ -1,8 +1,9 @@
 <script>
-import "./app.css";
-import * as Avatar from "$lib/components/ui/avatar";
-import * as HoverCard from "$lib/components/ui/hover-card";
-import { Button } from "$lib/components/ui/button";
+import "./app.css"
+import * as Avatar from "$lib/components/ui/avatar"
+import * as HoverCard from "$lib/components/ui/hover-card"
+import * as Card from "$lib/components/ui/card"
+import { Button } from "$lib/components/ui/button"
 import camera from '../images/camera.png'
 import coffee from '../images/coffee.jpg'
 import homePage from '../images/homePage.png'
@@ -12,46 +13,83 @@ import office from '../images/office.jpg'
 import waahhoo from '../images/waahhoo.png'
 </script>
 
-<div class="fixed border border-transparent border-b-neutral-800 h-24 w-screen pt-2 bg-white">
+<div class="navBar fixed border border-transparent h-24 w-full bg-white z-10">
 	<div class="flex flex-col h-full items-center justify-center space-y-2">
 		<h1 class="text-2xl font-bold">ALEX TIRADOR</h1>
 		<div class="flex flex-row h-full justify-between space-x-12 align-text-middle">
-			<Button variant="outline">Home</Button>
-			<Button variant="outline">About</Button>
-			<Button variant="outline">Skills</Button>
-			<Button variant="outline">Contact</Button>
+			<Button class="text-neutral-500 bg-white font-semibold hover:bg-white hover:text-green-500" href="#home">
+				<span class="underline-animation">Home</span>
+			</Button>
+			<Button class="text-neutral-500 bg-white font-semibold hover:bg-white hover:text-green-500" href="#about">
+				<span class="underline-animation">About</span>
+			</Button>
+			<Button class="text-neutral-500 bg-white font-semibold hover:bg-white hover:text-green-500" href="#skills">
+				<span class="underline-animation">Skills</span>
+			</Button>
+			<Button class="hover:bg-green-500 hover:text-white hover:border-green-500 border border-2 border-black bg-white text-black font-semibold">Contact</Button>
 		</div>
 	</div>
 </div>
-<div class="flex flex-col h-screen items-center justify-center">
+<div class="homeScreen flex flex-col overflow-hidden">
 	<section id="home">
-		<p class="text-3xl z-20 font-bold">ALEX TIRADOR</p>
-		<div class="bg-[url('https://cdn.b12.io/media/fbeb727a-6267-11e7-9ce2-0242ac110002-nastuh-abootalebi-284882.jpg')] bg-no-repeat sm:bg-cover md:bg-cover lg:bg-cover xl:bg-cover">
-			<img src="{office}" alt="home">
-		</div>
-	</section>
-	
-	<h1 class="text-6xl">Waahhoo</h1>
-	<HoverCard.Root>
-		<HoverCard.Trigger>
-			<Avatar.Root class="h-48 w-48">
-				<Avatar.Image src="{waahhoo}" alt="avatar"/>
-				<Avatar.Fallback>Waahhoo</Avatar.Fallback>
-			</Avatar.Root>
-		</HoverCard.Trigger>
-		<HoverCard.Content class="w-80">
-			<div class="flex justify-between">
-				<Avatar.Root class="h-16 w-16">
-					<Avatar.Image src="{waahhoo}" alt="avatar"/>
-					<Avatar.Fallback>Waahhoo</Avatar.Fallback>
-				</Avatar.Root>
-				<div class="space-y-1">
-					<h4 class="text-md font-semibold">Alex Tirador</h4>
-					<p class="text-sm">Junior CS Major @</p>
-					<p class="text-sm">The University of Maryland</p>
+		<div data-bg="url('https://cdn.b12.io/media/fbeb727a-6267-11e7-9ce2-0242ac110002-nastuh-abootalebi-284882.jpg')" style=" background-image:url('https://cdn.b12.io/media/fbeb727a-6267-11e7-9ce2-0242ac110002-nastuh-abootalebi-284882.jpg')">
+			<div class="w-screen overflow-hidden">
+				<div class="container h-screen w-[40%] text-left pt-[20%]">
+					<div class="flex flex-col h-full space-y-8">
+						<p class="text-white text-6xl font-bold">Alex Tirador</p>
+						<div class="space-y-2">
+							<p class="text-white text-2xl">Junior Computer Science Major</p>
+							<p class="text-white text-2xl">The University of Maryland, College Park</p>
+						</div>
+						<div class="flex">
+							<Button class="hover:bg-green-500 hover:border-green-500 border border-white border-2 bg-transparent h-14 w-36 font-bold">MY SKILLS</Button>
+						</div>
+					</div>
 				</div>
 			</div>
-		</HoverCard.Content>
-	</HoverCard.Root>
-	<p class="text-lg">Hey look this works!</p>
+		</div>
+	</section>
+</div>
+<div class="aboutMe flex flex-col items-center justify-center pt-48">
+	<section id="about">
+		<div class="flex flex-col items-center justify-center space-y-4">
+			<p class="text-green-500 font-bold">Who am I?</p>
+			<h1 class="text-6xl">Waahhoo</h1>
+			<HoverCard.Root>
+				<HoverCard.Trigger href="https://github.com/waahhoo">
+					<Avatar.Root class="h-48 w-48">
+						<Avatar.Image src="{waahhoo}" alt="avatar"/>
+						<Avatar.Fallback>Waahhoo</Avatar.Fallback>
+					</Avatar.Root>
+				</HoverCard.Trigger>
+				<HoverCard.Content class="w-80">
+					<div class="flex justify-between">
+						<Avatar.Root class="h-16 w-16">
+							<Avatar.Image src="{waahhoo}" alt="avatar"/>
+							<Avatar.Fallback>Waahhoo</Avatar.Fallback>
+						</Avatar.Root>
+						<div class="space-y-1">
+							<h4 class="text-md font-semibold">Alex Tirador</h4>
+							<p class="text-sm">Junior CS Major @</p>
+							<p class="text-sm">The University of Maryland</p>
+						</div>
+					</div>
+				</HoverCard.Content>
+			</HoverCard.Root>
+			<Card.Root class="w-[350px]">
+				<Card.Header class="text-green-500 text-2xl font-bold">
+					Alex Tirador
+				</Card.Header>
+				<Card.Description>Discover my interests and hobbies *MOST PR PHRASE EVER*</Card.Description>
+				<Card.Content>
+					<p>idk what to put on here for now so here you go !!!!</p>
+				</Card.Content>
+			</Card.Root>
+		</div>
+	</section>
+</div>
+<div class="mySkills flex flex-col items-center justify-center pt-48">
+	<section id="skills">
+		<img src="{camera}" alt="camera">
+	</section>
 </div>
