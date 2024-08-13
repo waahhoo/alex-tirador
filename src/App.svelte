@@ -42,7 +42,7 @@ import waahhoo from '../images/waahhoo.png'
 							<p class="text-white text-2xl">The University of Maryland, College Park</p>
 						</div>
 						<div class="flex">
-							<Button class="hover:bg-green-500 hover:border-green-500 border border-white border-2 bg-transparent h-14 w-36 font-bold">MY SKILLS</Button>
+							<Button class="hover:bg-green-500 hover:border-green-500 border border-white border-2 bg-transparent h-14 w-36 font-bold" href="#skills">MY SKILLS</Button>
 						</div>
 					</div>
 				</div>
@@ -90,6 +90,12 @@ import waahhoo from '../images/waahhoo.png'
 </div>
 <div class="mySkills flex flex-col items-center justify-center pt-48">
 	<section id="skills">
-		<img src="{camera}" alt="camera">
+		<div class="flex flex-col items-center justify-center space-y-4">
+			<h1 class="text-4xl text-blue-400 font-semibold">This is my Skills tab</h1>
+			<p class="text-4xl text-blue-400 font-semibold">as you can see it is empty because I do not have skills</p>
+			<p class="text-4xl text-blue-400 font-semibold">;-;</p>
+			<p class="text-4xl text-blue-400 font-semibold">What do you think about this cursed color pallete ??</p>
+			<img src="{camera}" alt="camera">
+		</div>
 	</section>
 </div>
