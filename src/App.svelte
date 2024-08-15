@@ -5,7 +5,7 @@ import * as HoverCard from "$lib/components/ui/hover-card"
 import * as Card from "$lib/components/ui/card"
 import { Button } from "$lib/components/ui/button"
 import { Github, Linkedin, Mail, MapPin } from 'lucide-svelte';
-import camera from '../images/camera.png'
+import resume from '../images/MyResume.pdf'
 import coffee from '../images/coffee.jpg'
 import linkedin from '../images/linkedin.png'
 import gmail from '../images/gmail.png'
@@ -112,10 +112,6 @@ import waahhoo from '../images/waahhoo.png'
 				<Mail />
 				<HoverCard.Root>
 					<HoverCard.Trigger>
-						<!-- <Avatar.Root class="h-48 w-48">
-							<Avatar.Image src="{gmail}" alt="avatar"/>
-							<Avatar.Fallback>gmail</Avatar.Fallback>
-						</Avatar.Root> -->
 						<h1 class="text-xl text-neutral-400 font-semibold underline hover:text-green-500">alextirador512@gmail.com</h1>
 					</HoverCard.Trigger>
 					<HoverCard.Content class="w-80">
@@ -136,10 +132,6 @@ import waahhoo from '../images/waahhoo.png'
 				<Linkedin />
 				<HoverCard.Root>
 					<HoverCard.Trigger href="https://www.linkedin.com/in/alex-tirador/" target="_blank" rel="noopener noreferrer">
-						<!-- <Avatar.Root class="h-48 w-48">
-							<Avatar.Image src="{linkedin}" alt="avatar"/>
-							<Avatar.Fallback>linkedin</Avatar.Fallback>
-						</Avatar.Root> -->
 						<h1 class="text-xl text-neutral-400 font-semibold underline hover:text-green-500">https://www.linkedin.com/in/alex-tirador</h1>
 					</HoverCard.Trigger>
 					<HoverCard.Content class="w-64">
@@ -160,10 +152,6 @@ import waahhoo from '../images/waahhoo.png'
 				<Github />
 				<HoverCard.Root>
 					<HoverCard.Trigger href="https://github.com/waahhoo" target="_blank" rel="noopener noreferrer">
-						<!-- <Avatar.Root class="h-48 w-48">
-							<Avatar.Image src="{waahhoo}" alt="avatar"/>
-							<Avatar.Fallback>Waahhoo</Avatar.Fallback>
-						</Avatar.Root> -->
 						<h1 class="text-xl text-neutral-400 font-semibold underline hover:text-green-500">https://github.com/waahhoo</h1>
 					</HoverCard.Trigger>
 					<HoverCard.Content class="w-64">
@@ -194,11 +182,35 @@ import waahhoo from '../images/waahhoo.png'
 		</div>
 	</section>
 </div>
-<div class="flex flex-row items-center justify-center w-full pb-28 bg-neutral-800">
+<div class="flex flex-row items-center justify-center w-full pb-4 bg-green-950 text-white">
 	<div class="flex flex-col items-center justify-center space-y-10 pt-28">
-		<img src="{camera}" alt="office">
-
+		<div class="flex flex-row items-center justify-center space-x-20">
+			<div class="flex flex-col items-center justify-center">
+				<h1 class="text-2xl font-bold">Location</h1>
+				<a class="text-xl text-white font-semibold underline hover:no-underline" 
+				target="_blank" rel="noopener noreferrer" 
+				href="https://www.google.com/maps/place/College+Park,+MD/@38.998334,-76.9372489,13z/data=!3m1!4b1!4m6!3m5!1s0x89b7c41e0d714699:0xeb8c0de36dd36d95!8m2!3d38.9896967!4d-76.93776!16zL20vMHBjNng?entry=ttu">
+					College Park, MD
+				</a>
+			</div>
+			<div class="flex flex-col items-center justify-center">
+				<h1 class="text-2xl font-bold">Resume</h1>
+				<a class="text-xl text-white font-semibold underline hover:no-underline" 
+				target="_blank" rel="noopener noreferrer" download
+				href="{resume}">
+					MyResume.pdf
+				</a>
+			</div>
+			<div class="flex flex-col items-center justify-center">
+				<h1 class="text-2xl font-bold">Connect</h1>
+				<a class="text-xl text-white font-semibold underline hover:no-underline" 
+				target="_blank" rel="noopener noreferrer" 
+				href="https://www.linkedin.com/in/alex-tirador/">
+					LinkedIn
+				</a>
+			</div>
+		</div>
+		<p class="pt-36 text-xs">All the design and code of this website is my own, homepage background was taken from online, the rest of the images on the site are my own as well.</p>
 		<!-- links to the page in test.svelte -->
-		<Button href="./test.svelte">TESTING</Button>
 	</div>
 </div>
