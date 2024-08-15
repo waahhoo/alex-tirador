@@ -4,12 +4,11 @@ import * as Avatar from "$lib/components/ui/avatar"
 import * as HoverCard from "$lib/components/ui/hover-card"
 import * as Card from "$lib/components/ui/card"
 import { Button } from "$lib/components/ui/button"
+import { Github, Linkedin, Mail, MapPin } from 'lucide-svelte';
 import camera from '../images/camera.png'
 import coffee from '../images/coffee.jpg'
-import homePage from '../images/homePage.png'
-import portrait from '../images/portrait.jpg'
-import snow from '../images/snow.jpg'
-import office from '../images/office.jpg'
+import linkedin from '../images/linkedin.png'
+import gmail from '../images/gmail.png'
 import waahhoo from '../images/waahhoo.png'
 </script>
 
@@ -28,7 +27,7 @@ import waahhoo from '../images/waahhoo.png'
 			<Button class="text-neutral-500 bg-white font-semibold hover:bg-white hover:text-green-500" href="#skills">
 				<span class="underline-animation">Skills</span>
 			</Button>
-			<Button class="hover:bg-green-500 hover:text-white hover:border-green-500 border border-2 border-black bg-white text-black font-semibold">Contact</Button>
+			<Button class="hover:bg-green-500 hover:text-white hover:border-green-500 border border-2 border-black bg-white text-black font-semibold" href="#contact">Contact</Button>
 		</div>
 	</div>
 </div>
@@ -56,7 +55,7 @@ import waahhoo from '../images/waahhoo.png'
 	<section id="about">
 		<div class="flex flex-row items-center justify-center space-x-10 pt-28">
 			<div class="w-[20%] space-y-4">
-				<p class="text-green-500 font-bold">Who am I?</p>
+				<p class="text-green-500 font-bold">Who am I</p>
 				<h1 class="text-3xl font-bold">Discover my interests and hobbies</h1>
 				<p class="text-lg text-neutral-600">
 					Welcome to my personal portfolio, my name is Alex. On this website I showcase my technical skills, personal projects, and diverse interests. 
@@ -102,31 +101,104 @@ import waahhoo from '../images/waahhoo.png'
 		</div>
 	</section>
 </div>
-<div class="contactMe flex flex-col items-center justify-center w-full pb-28">
-	<section id="contact">
-		<div class="flex flex-row items-center justify-center space-x-10 pt-28">
-			<h1 class="text-5xl">Waahhoo</h1>
-			<HoverCard.Root>
-				<HoverCard.Trigger href="https://github.com/waahhoo">
-					<Avatar.Root class="h-48 w-48">
-						<Avatar.Image src="{waahhoo}" alt="avatar"/>
-						<Avatar.Fallback>Waahhoo</Avatar.Fallback>
-					</Avatar.Root>
-				</HoverCard.Trigger>
-				<HoverCard.Content class="w-80">
-					<div class="flex justify-between">
-						<Avatar.Root class="h-16 w-16">
+<div class="contactMe flex items-center justify-center w-full pb-28">
+	<section id="contact" class="justify-center text-left space-y-12 pt-28 w-[35%]">
+		<div>
+			<p class="text-green-500 font-bold">Where to reach me</p>
+			<p class="text-3xl font-bold">Here are a few helpful links</p>
+		</div>
+		<div class="flex flex-col space-y-8">
+			<div class="flex flex-row space-x-2 items-center">
+				<Mail />
+				<HoverCard.Root>
+					<HoverCard.Trigger>
+						<!-- <Avatar.Root class="h-48 w-48">
+							<Avatar.Image src="{gmail}" alt="avatar"/>
+							<Avatar.Fallback>gmail</Avatar.Fallback>
+						</Avatar.Root> -->
+						<h1 class="text-xl text-neutral-400 font-semibold underline hover:text-green-500">alextirador512@gmail.com</h1>
+					</HoverCard.Trigger>
+					<HoverCard.Content class="w-80">
+						<div class="flex items-center justify-center space-x-4">
+							<Avatar.Root class="h-16 w-16">
+								<Avatar.Image src="{gmail}" alt="avatar"/>
+								<Avatar.Fallback>gmail</Avatar.Fallback>
+							</Avatar.Root>
+							<div class="space-y-1">
+								<h4 class="text-md font-semibold">Alex Tirador</h4>
+								<p class="text-sm">alextirador512@gmail.com</p>
+							</div>
+						</div>
+					</HoverCard.Content>
+				</HoverCard.Root>
+			</div>
+			<div class="flex flex-row space-x-2 items-center">
+				<Linkedin />
+				<HoverCard.Root>
+					<HoverCard.Trigger href="https://www.linkedin.com/in/alex-tirador/" target="_blank" rel="noopener noreferrer">
+						<!-- <Avatar.Root class="h-48 w-48">
+							<Avatar.Image src="{linkedin}" alt="avatar"/>
+							<Avatar.Fallback>linkedin</Avatar.Fallback>
+						</Avatar.Root> -->
+						<h1 class="text-xl text-neutral-400 font-semibold underline hover:text-green-500">https://www.linkedin.com/in/alex-tirador</h1>
+					</HoverCard.Trigger>
+					<HoverCard.Content class="w-64">
+						<div class="flex items-center justify-center space-x-8">
+							<Avatar.Root class="h-16 w-16">
+								<Avatar.Image src="{linkedin}" alt="avatar"/>
+								<Avatar.Fallback>linkedin</Avatar.Fallback>
+							</Avatar.Root>
+							<div class="space-y-1">
+								<h4 class="text-md font-semibold">Alex Tirador</h4>
+								<p class="text-sm">alex-tirador</p>
+							</div>
+						</div>
+					</HoverCard.Content>
+				</HoverCard.Root>
+			</div>
+			<div class="flex flex-row space-x-2 items-center">
+				<Github />
+				<HoverCard.Root>
+					<HoverCard.Trigger href="https://github.com/waahhoo" target="_blank" rel="noopener noreferrer">
+						<!-- <Avatar.Root class="h-48 w-48">
 							<Avatar.Image src="{waahhoo}" alt="avatar"/>
 							<Avatar.Fallback>Waahhoo</Avatar.Fallback>
-						</Avatar.Root>
-						<div class="space-y-1">
-							<h4 class="text-md font-semibold">Alex Tirador</h4>
-							<p class="text-sm">Junior CS Major @</p>
-							<p class="text-sm">The University of Maryland</p>
+						</Avatar.Root> -->
+						<h1 class="text-xl text-neutral-400 font-semibold underline hover:text-green-500">https://github.com/waahhoo</h1>
+					</HoverCard.Trigger>
+					<HoverCard.Content class="w-64">
+						<div class="flex items-center justify-center space-x-4">
+							<Avatar.Root class="h-16 w-16">
+								<Avatar.Image src="{waahhoo}" alt="avatar"/>
+								<Avatar.Fallback>Waahhoo</Avatar.Fallback>
+							</Avatar.Root>
+							<div class="space-y-1">
+								<h4 class="text-md font-semibold">Alex Tirador</h4>
+								<p class="text-sm">Waahhoo</p>
+							</div>
 						</div>
-					</div>
-				</HoverCard.Content>
-			</HoverCard.Root>
+					</HoverCard.Content>
+				</HoverCard.Root>
+			</div>
+		</div>
+		<div class="space-y-4">
+			<p class="text-2xl font-bold">Location</p>
+			<div class="flex flex-row space-x-2">
+				<MapPin />
+				<a class="text-xl text-neutral-400 font-semibold underline hover:text-green-500" 
+				target="_blank" rel="noopener noreferrer" 
+				href="https://www.google.com/maps/place/College+Park,+MD/@38.998334,-76.9372489,13z/data=!3m1!4b1!4m6!3m5!1s0x89b7c41e0d714699:0xeb8c0de36dd36d95!8m2!3d38.9896967!4d-76.93776!16zL20vMHBjNng?entry=ttu">
+					College Park, MD
+				</a>
+			</div>
 		</div>
 	</section>
+</div>
+<div class="flex flex-row items-center justify-center w-full pb-28 bg-neutral-800">
+	<div class="flex flex-col items-center justify-center space-y-10 pt-28">
+		<img src="{camera}" alt="office">
+
+		<!-- links to the page in test.svelte -->
+		<Button href="./test.svelte">TESTING</Button>
+	</div>
 </div>
