@@ -1,15 +1,27 @@
 <script>
+// @ts-nocheck
+
 import "./app.css"
+import Autoplay from "embla-carousel-autoplay";
 import * as Avatar from "$lib/components/ui/avatar"
 import * as HoverCard from "$lib/components/ui/hover-card"
 import * as Card from "$lib/components/ui/card"
+import * as Carousel from "$lib/components/ui/carousel/index.js";
 import { Button } from "$lib/components/ui/button"
 import { Github, Linkedin, Mail, MapPin } from 'lucide-svelte';
-import resume from '../images/MyResume.pdf'
+import resume from '../images/AlexTiradorResume.pdf'
 import coffee from '../images/coffee.jpg'
 import linkedin from '../images/linkedin.png'
 import gmail from '../images/gmail.png'
 import waahhoo from '../images/waahhoo.png'
+
+let skillsArr = [
+	{name: "C Hashmap", githubURL: "https://github.com/waahhoo/c-hashmap"},
+	{name: "Project 2", githubURL: "empty"},
+	{name: "Project 3", githubURL: "empty"}
+];
+
+const carouselPlugin = Autoplay({ delay: 2000 });
 </script>
 
 <div class="navBar fixed border border-transparent h-24 w-full bg-white z-10">
@@ -82,21 +94,27 @@ import waahhoo from '../images/waahhoo.png'
 				</div>
 			</div>
 			<div class="flex flex-row items-center justify-center space-x-10 w-full">
-				<Card.Root>
-					<Card.Content>
-						<h1>Project 1</h1>
-					</Card.Content>
-				</Card.Root>
-				<Card.Root>
-					<Card.Content>
-						<h1>Project 2</h1>
-					</Card.Content>
-				</Card.Root>
-				<Card.Root>
-					<Card.Content>
-						<h1>Project 3</h1>
-					</Card.Content>
-				</Card.Root>
+				<Carousel.Root class="w-full max-w-xs" plugins={[carouselPlugin]}
+				on:mouseenter={carouselPlugin.stop}
+				on:mouseleave={carouselPlugin.reset}>
+				  <Carousel.Content>
+					{#each skillsArr as project (project.name)}
+					  <Carousel.Item>
+						<div class="p-1">
+						  <Card.Root>
+							<Card.Content class="flex aspect-square items-center justify-center p-6">
+							  <a href={project.githubURL} target="_blank" rel="noopener noreferrer">
+								<Button>{project.name}</Button>
+							  </a>
+							</Card.Content>
+						  </Card.Root>
+						</div>
+					  </Carousel.Item>
+					{/each}
+				  </Carousel.Content>
+				  <Carousel.Previous />
+				  <Carousel.Next />
+				</Carousel.Root>
 			</div>
 		</div>
 	</section>
@@ -112,7 +130,7 @@ import waahhoo from '../images/waahhoo.png'
 				<Mail />
 				<HoverCard.Root>
 					<HoverCard.Trigger>
-						<h1 class="text-xl text-neutral-400 font-semibold underline hover:text-green-500">alextirador512@gmail.com</h1>
+						<h1 class="text-xl text-neutral-400 font-semibold underline hover:text-green-500">alextirador512(at)gmail.com</h1>
 					</HoverCard.Trigger>
 					<HoverCard.Content class="w-80">
 						<div class="flex items-center justify-center space-x-4">
@@ -122,7 +140,7 @@ import waahhoo from '../images/waahhoo.png'
 							</Avatar.Root>
 							<div class="space-y-1">
 								<h4 class="text-md font-semibold">Alex Tirador</h4>
-								<p class="text-sm">alextirador512@gmail.com</p>
+								<p class="text-sm">alextirador512(at)gmail.com</p>
 							</div>
 						</div>
 					</HoverCard.Content>
@@ -215,3 +233,6 @@ import waahhoo from '../images/waahhoo.png'
 	</div>
 </div>
 <!-- test -->
+<!-- <Button href="src/test.svelte">
+	click me pls
+</Button> -->
