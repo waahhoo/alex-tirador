@@ -150,7 +150,7 @@
 				</div>
 			</div>
 			<div
-				class="flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-col items-center justify-center space-x-10 w-full"
+				class="flex 2xl:space-x-4 xl:space-x-2 lg:space-y-4 md:space-y-2 sm:space-y-2 2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col items-center justify-center w-full"
 			>
 				{#each projectsArr as project (project.description)}
 					<div>
@@ -159,7 +159,7 @@
 						>
 							<Card.Header>
 								<Card.Title>
-									<img src={portrait} alt="coffee" />
+									<img src={portrait} alt="image" />
 								</Card.Title>
 								<Card.Description
 									>{project.description}</Card.Description
@@ -178,6 +178,9 @@
 						</Card.Root>
 					</div>
 				{/each}
+			</div>
+			<div class="flex items-center justify-center">
+				<p>GitHub repositories for the above projects are private. Email or connect on LinkedIn for access/further insights.</p>
 			</div>
 		</div>
 	</section>
@@ -345,7 +348,7 @@
 		<!-- links to the page in test.svelte -->
 	</div>
 </div>
-<!-- test -->
-<!-- <Button href="src/test.svelte">
-	click me pls
-</Button> -->
+
+<!-- <div>
+	<Button href="src/pictures.svelte">click me pls</Button>
+</div> -->
